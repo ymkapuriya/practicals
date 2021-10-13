@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Test</title>
+
+    <link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <script>
+            function run() {
+                let number;
+                let isPrime = true;
+                number = prompt("Enter number")
+
+                //check the number is prime or not
+                let i = 2;
+                while (i < number - 1) {
+                    if (number % i == 0) {
+                        isPrime = false;
+                    }
+                    i++;
+                }
+                const message = "Number " + number + " is " + (isPrime ? "Prime" : "Not Prime")
+                alert(message)
+            }
+        </script>
+        <button onclick="run()">
+            Run Javascript
+        </button>
+    </main>
+    <footer>
+
+    </footer>
+
+
+</body>
+
+</html>

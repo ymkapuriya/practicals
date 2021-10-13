@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Test</title>
+
+    <link rel="stylesheet" href="app.css">
+
+    <script>
+        function validate() {
+            let isValid = true;
+
+            const name = document.getElementById('name').value;
+            const tokens = name.split(" ")
+            if (tokens.length !== 3) {
+                isValid = false;                
+            }
+
+            return isValid;
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="form-container">
+            <form action="" onsubmit="return validate()">
+                <div class="input">
+                    <label for="name">Enter name</label>
+                    <input type="text" name="name" id="name" />
+                </div>
+
+                <div class="input">
+                    <label for="address">Enter address</label>
+                    <input type="text" name="address" id="address" />
+                </div>
+
+                <div class="input">
+                    <label for="phone">Enter phone</label>
+                    <input type="tel" name="phone" id="phone" />
+                </div>
+
+                <div class="input">
+                    <label for="email">Enter email</label>
+                    <input type="email" name="email" id="email" />
+                </div>
+
+                <div class="input">
+                    <label for="dob">Enter date of birth</label>
+                    <input type="date" name="dob" id="dob" />
+                </div>
+
+                <button type="submit">
+                    Save
+                </button>
+
+            </form>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+</body>
+
+</html>

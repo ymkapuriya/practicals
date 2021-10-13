@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/two.js"></script>
+</head>
+
+<body>
+    <div class="form-container" id="form">
+        <canvas id="my-canvas" width="100" style="border: 5px #000 solid; background-color: #000;"></canvas>
+        <form action="app.php" onsubmit="return validateForm();" name="myform">
+            <div class="input">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="required" />
+                <span class="hint"></span>
+            </div>
+            <div class="input">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" class="required" />
+                <span class="hint"></span>
+            </div>
+            <div class="input">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" class="required" value="defaultphone" />
+                <span class="hint"></span>
+            </div>
+            <div class="input">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="required" />
+                <span class="hint"></span>
+            </div>
+            <div class="input">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password" />
+                <span class="hint"></span>
+            </div>
+            <div class="input">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm_password" id="confirm-password" />
+                <span class="hint"></span>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+
+        const canvas = document.getElementById('my-canvas')
+        canvas.onmouseover = function (event) {
+            console.log(event)
+        }
+        canvas.onmousemove = function (event) {
+            console.log("Moved")
+        }
+
+        const form = document.forms.myform;
+        const phone = form.phone.value
+        console.log(phone)
+        console.log(form.elements)
+
+        document.getElementById('form').onclick = function (event) {
+            console.log(event)
+            //event.preventDefault();
+            //alert("Right click is disabled")
+        }
+
+        const requiredElements = document.getElementsByClassName('required')
+        /*
+        for (const element of requiredElements) {
+            element.onblur = function (event) {
+                const target = event.currentTarget;
+                target.style.backgroundColor = "white";
+                target.style.color = "black"
+            }
+            element.onfocus = function (event) {
+                const target = event.currentTarget;
+                target.style.backgroundColor = "blue";
+                target.style.color = "white";
+            }
+        }*/
+
+        const name = document.getElementById('name')
+        name.onchange = function () {
+            console.log("changed")
+        }
+        name.onkeypress = function () {
+            //console.log("key up")
+        }
+        name.onkeydown = function () {
+            //console.log("key down")
+        }
+        /*
+        name.onkeyup = function (event) {
+            //console.log(event);
+            const target = event.currentTarget;
+            let value = target.value
+            value = value.toUpperCase();
+            target.value = value;
+        }
+        */
+
+        const onKey = function (event) {
+            let target, value;
+            switch (event.type) {
+                case "keyup":
+                    target = this
+                    value = target.value
+                    value = value.toUpperCase();
+                    target.value = value;
+                    break;
+                case "keydown":
+                    target = this
+                    value = target.value
+                    value = value.toUpperCase();
+                    target.value = value;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        //name.onkeyup = onKeyUp;
+
+        name.addEventListener('keyup', onKey)
+        name.addEventListener('keydown', onKey)
+
+        setTimeout(() => {
+            name.removeEventListener('keyup', onKey)
+
+        }, 5000);
+    </script>
+</body>
+
+</html>

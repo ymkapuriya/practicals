@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+* {
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: aqua;
+    margin: 0;
+}
+
+div#left-panel {
+    background-color: #0000FF;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+}
+
+div#page-container {
+    position: relative;
+    margin: 5rem;
+    background: #fff;
+    padding: 2rem;
+    padding-left: 0;
+    box-shadow: 0px 0px 20px grey;
+}
+
+div#page-left-panel {
+    position: absolute;
+    top: 0px;
+    width: 50px;
+    background-color: #3333FF;
+    bottom: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+div#page-content {
+    margin: 20px 20px 20px 70px;
+}
+
+div#header {
+    display: table;
+    width: 100%;
+}
+
+div#logo-container {
+    display: table-cell;
+    width: 200px;
+}
+
+div#logo-container img {
+    width: 100%;
+}
+
+div#nav-container {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+
+div#nav-container ul {
+    list-style-type: none;
+}
+
+div#nav-container ul li {
+    display: inline-block;
+}
+
+div#nav-container ul li a {
+    color: grey;
+    text-decoration: none;
+    padding: 1em;
+}
+
+div#nav-container ul li a:hover {
+    color: #000;
+    background-color: #EEE;
+}
+
+div#main {
+    display: table;
+    width: 100%;
+}
+
+div#content {
+    display: table-cell;
+    padding: 2em;
+    vertical-align: middle;
+}
+
+div#banner {
+    display: table-cell;
+    text-align: right;
+}
+
+div#banner img {
+    height: 300px;
+}
+
+div#content h2 {
+    color: blue;
+}
+
+div#content h1 {
+    font-size: 4em;
+}
+
+a.special {
+    background-color: #00f;
+    color: #fff;
+    padding: 1em;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#features{
+    margin: 1em 2em;
+}
+
+div.feature{
+    display: table-cell;
+    border-left: 2px solid #EEE;
+    padding: 5px 20px;
+}
+
+div.feature h5{
+    color: grey;
+    margin: 0.5em 0em;
+    font-variant: small-caps;
+}
+
+div.feature h4{
+    color: blue;    
+    margin-top: 0.5em;
+}
+
+div.feature p{
+    font-size: 0.7em;
+    color:grey;
+}
+
+div.form-container{
+    margin: auto;
+    margin-top: 100px;
+    width: 50%;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px #aaa
+}
+
+div.input{
+    display:block;
+    margin: 2em;
+}
+
+input{
+    padding: 5px;
+}
+
+div.input label{
+    display: block;
+    margin-bottom: 5px;
+}
